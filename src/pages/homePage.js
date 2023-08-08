@@ -1,7 +1,13 @@
+import Header from "../components/header";
+import HeroBox from "../components/heroBox";
+import Web from "../components/web";
+
 export default function HomePage() {
     return (
         <div>
-            <h1>Home Page</h1>
+            <Header/>
+            <HeroBox/>
+            <Web/>
         </div>
     );
 }
