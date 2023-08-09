@@ -2,3 +2,7 @@
 * {
     font-family: 'Montserrat', sans-serif;
 }
+
+a:hover h5 {
+    color: rgba(157, 111, 177, 255) !important;
+}
