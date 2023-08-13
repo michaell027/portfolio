@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 
-export default function Header() {
+export default function Header({ component, setComponent }) {
     const [menuOpen, setMenuOpen] = useState(false);
     const [hideItems, setHideItems] = useState(false);
     const [hoverHome, setHoverHome] = useState(false);
@@ -9,7 +9,6 @@ export default function Header() {
     const [hoverSkills, setHoverSkills] = useState(false);
     const [hoverProjects, setHoverProjects] = useState(false);
     const [hoverContact, setHoverContact] = useState(false);
-    const [component, setComponent] = useState('home');
 
     useEffect(() => {
         let timeoutId;
