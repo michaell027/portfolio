@@ -6,3 +6,42 @@
 a:hover h5 {
     color: rgba(157, 111, 177, 255) !important;
 }
+
+.text-transition {
+    display: inline;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+}
+
+.text-transition::before {
+    content: attr(data-text);
+    display: inline-block;
+    transform: translateX(100%);
+    animation: slide-in 2s linear infinite;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.text-transition.out::before {
+    animation: slide-out 1s linear; /* Zmenili sme rýchlosť na 1 sekundu */
+}
+
+@keyframes slide-in {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-out {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
