@@ -34,7 +34,7 @@ export default function Header({ component, setComponent }) {
 
 
     return (
-        <div className={`w-auto fixed flex ml-4 mt-2 transition-height duration-500 ease-in-out ${menuOpen ? 'h-[50px]' : 'h-[360px]'}`}>
+        <div className={`w-auto border-2 border-pink-800 fixed flex ml-4 mt-2 transition-height duration-500 ease-in-out ${menuOpen ? 'h-[50px]' : 'h-[360px]'}`}>
             <ul className="bg-black w-12 rounded-3xl flex flex-col items-center justify-center gap-4 py-4">
                 <li>
                     <a className="flex items-center justify-center p-2 rounded-full hover:bg-gray-700 text-white" onClick={toggleMenu}>
