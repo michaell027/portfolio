@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 
 export default function Header({ component, setComponent }) {
-    const [menuOpen, setMenuOpen] = useState(false);
+    const [menuOpen, setMenuOpen] = useState(true);
     const [hideItems, setHideItems] = useState(false);
     const [hoverHome, setHoverHome] = useState(false);
     const [hoverAbout, setHoverAbout] = useState(false);
@@ -34,8 +34,8 @@ export default function Header({ component, setComponent }) {
 
 
     return (
-        <div className={`w-auto border-2 border-pink-800 fixed flex ml-4 mt-2 transition-height duration-500 ease-in-out ${menuOpen ? 'h-[50px]' : 'h-[360px]'}`}>
-            <ul className="bg-black w-12 rounded-3xl flex flex-col items-center justify-center gap-4 py-4">
+        <div className={`w-auto z-10 fixed flex ml-4 mt-2 transition-height duration-500 ease-in-out ${menuOpen ? 'h-[50px]' : 'h-[360px]'}`}>
+            <ul className="bg-gray-800 w-12 rounded-3xl flex flex-col items-center justify-center gap-4 py-4">
                 <li>
                     <a className="flex items-center justify-center p-2 rounded-full hover:bg-gray-700 text-white" onClick={toggleMenu}>
                         {!menuOpen ? (
@@ -97,23 +97,23 @@ export default function Header({ component, setComponent }) {
             </ul>
 
             <ul className={`flex flex-col gap-[28px] py-4 pl-2 pt-[65px] transition-opacity ease-in-out duration-100 ${hideItems ? 'opacity-0' : 'opacity-100'}`}>
-                <li className={`flex items-center gap-2 ${hoverHome || component==='home' ? 'border-l-4 border-black' : ''}`}>
-                    <h5 className="text-black pl-1">Home</h5>
+                <li className={`flex items-center gap-2 ${hoverHome || component==='home' ? 'border-l-4 border-white' : ''}`}>
+                    <h5 className="text-white pl-1 menu-text">Home</h5>
                 </li>
-                <li className={`flex items-center gap-2 ${hoverAbout || component==='about' ? 'border-l-4 border-black' : ''}`}>
-                    <h5 className="text-black pl-1">About</h5>
+                <li className={`flex items-center gap-2 ${hoverAbout || component==='about' ? 'border-l-4 border-white' : ''}`}>
+                    <h5 className="text-white pl-1 menu-text">About</h5>
                 </li>
-                <li className={`flex items-center gap-2 ${hoverEducation || component==='education' ? 'border-l-4 border-black' : ''}`}>
-                    <h5 className="text-black pl-1">Education</h5>
+                <li className={`flex items-center gap-2 ${hoverEducation || component==='education' ? 'border-l-4 border-white' : ''}`}>
+                    <h5 className="text-white pl-1 menu-text">Education</h5>
                 </li>
-                <li className={`flex items-center gap-2 ${hoverSkills || component==='skills' ? 'border-l-4 border-black' : ''}`}>
-                    <h5 className="text-black pl-1">Skills</h5>
+                <li className={`flex items-center gap-2 ${hoverSkills || component==='skills' ? 'border-l-4 border-white' : ''}`}>
+                    <h5 className="text-white pl-1 menu-text">Skills</h5>
                 </li>
-                <li className={`flex items-center gap-2 ${hoverProjects || component==='projects' ? 'border-l-4 border-black' : ''}`}>
-                    <h5 className="text-black pl-1">Projects</h5>
+                <li className={`flex items-center gap-2 ${hoverProjects || component==='projects' ? 'border-l-4 border-white' : ''}`}>
+                    <h5 className="text-white pl-1 menu-text">Projects</h5>
                 </li>
-                <li className={`flex items-center gap-2 ${hoverContact || component==='contact' ? 'border-l-4 border-black' : ''}`}>
-                    <h5 className="text-black pl-1">Contact</h5>
+                <li className={`flex items-center gap-2 ${hoverContact || component==='contact' ? 'border-l-4 border-white' : ''}`}>
+                    <h5 className="text-white pl-1 menu-text">Contact</h5>
                 </li>
             </ul>
         </div>

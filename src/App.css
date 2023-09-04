@@ -45,3 +45,7 @@ a:hover h5 {
         transform: translateX(-100%);
     }
 }
+
+.menu-text {
+    text-shadow: 3px 3px 6px black;
+}
