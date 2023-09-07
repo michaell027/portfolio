@@ -3,9 +3,10 @@ import HeroBox from "../components/heroBox";
 import About from "../components/about";
 import {useState} from "react";
 import Education from "../components/education";
-import Mobile from "../components/mobile";
+import Contact from "../components/contact";
 import Home from "../components/home";
 import Skills from "../components/skills";
+import Projects from "../components/projects";
 
 export default function HomePage() {
     const [component, setComponent] = useState('home'); // Lift state up
@@ -17,8 +18,9 @@ export default function HomePage() {
             {(component === "home" && <Home/>) ||
             (component === "about" && <About/>) ||
             (component === "education" && <Education/>) ||
-            (component === "contact" && <Mobile/>) ||
-            (component === "skills" && <Skills/>)
+            (component === "contact" && <Contact/>) ||
+            (component === "skills" && <Skills/>) ||
+            (component === "projects" && <Projects/>)
             }
             {/*</div>*/}
         </div>

@@ -5,7 +5,7 @@ export default function Education() {
         <div>
 
             <div
-                className="flex flex-col items-center justify-center min-h-screen p-10 text-gray-700 md:p-20"
+                className="flex flex-col items-center w-full justify-center min-h-screen bg-no-repeat bg-cover bg-center"
                 style={{backgroundImage: "url('header.png')"}}>
 
                 <div className="flex flex-wrap gap-8 items-center justify-center w-full max-w-4xl">
@@ -41,12 +41,12 @@ export default function Education() {
                     </div>
 
 
-
                     <div
                         className="z-10 flex flex-col flex-grow overflow-hidden transform bg-gray-600/20 rounded-lg shadow-lg hover:scale-110 transition-transform duration-300 ease-in-out">
                         <div className="flex flex-col items-center p-10 bg-gray-400/10">
                             <div className="flex items-center py-2">
-                                <img src="https://www.gta.sk/images/sablona/gta_logo-2.png" alt="logo" className="w-56"/>
+                                <img src="https://www.gta.sk/images/sablona/gta_logo-2.png" alt="logo"
+                                     className="w-56"/>
                             </div>
                         </div>
                         <div className="p-10 flex flex-col items-center justify-center">
