@@ -1,33 +1,32 @@
 export default function Projects() {
     return (
         <>
-            <div className="w-full h-screen leading-normal tracking-wider bg-cover bg-center bg-no-repeat"
+            <div className="w-full min-h-screen leading-normal tracking-wider bg-cover bg-center bg-no-repeat"
                  style={{backgroundImage: "url('header.png')"}}>
-                <div className="flex w-full flex-col items-center mx-auto h-full justify-center">
+                <div className="flex w-full flex-col items-center lg:mx-auto h-full justify-center">
                     <div
-                        className="mockup-browser w-2/3 bg-gray-500/30 hover:scale-110 duration-1000 transform ease-in-out cursor-pointer"
+                        className="flex flex-col w-5/6 xl:w-2/3 mt-12 bg-gray-500/30 hover:scale-110 duration-1000 transform ease-in-out cursor-pointer rounded-xl"
                         onClick={() => window.open("https://verejnostproti.sk", "_blank")}>
-                        <div className="mockup-browser-toolbar">
-                            <div className="input">https://verejnostproti.sk</div>
-                        </div>
                         <div className="flex flex-col items-center justify-center px-4 py-16 bg-gray-950/10">
                             <div
-                                className="flex w-full justify-center items-center flex-row rounded-lg">
+                                className="flex flex-col lg:flex-row w-full justify-center items-center rounded-lg">
                                 <img
-                                    className="w-auto h-56 rounded-t-lg object-cover m-0"
+                                    className="w-auto max-h-56 rounded-t-lg object-cover m-0"
                                     src="/verejnost_proti.png"
                                     alt=""/>
-                                <div className="flex flex-col justify-start ml-8">
+                                <div className="flex flex-col items-center mt-12 lg:mt-0 w-4/5 lg:w-full lg:items-start lg:ml-8">
                                     <h5
-                                        className="mb-2 uppercase text-xl font-medium text-neutral-800 dark:text-neutral-50">
+                                        className="uppercase text-center lg:text-start text-xl font-medium text-neutral-800 dark:text-neutral-50">
                                         Verejnosť proti
                                     </h5>
-                                    <p className="mb-4 text-base text-neutral-600 dark:text-neutral-200">
+                                    <p className="mb-2 mt-2 text-white text-sm">https://verejnostproti.sk
+                                    </p>
+                                    <p className="mb-4 text-base text-neutral-600 dark:text-neutral-200 text-center lg:text-start">
                                         This project page was created by the civic association "Verejnosť proti". The
                                         platform aims to foster community involvement and awareness on various issues.
                                     </p>
                                     {/*logo angular, typescript, firebase, primeNG*/}
-                                    <div className="flex flex-row gap-5 justify-start items-center">
+                                    <div className="flex gap-5 justify-start items-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50"
                                              viewBox="0 0 48 48">
                                             <linearGradient id="QzbsZZGqvt5vTzXzFrTWxa_j9DnICNnlhGk_gr1" x1="19.369"
@@ -76,8 +75,8 @@ export default function Projects() {
                                             <path fill="#ffca28"
                                                   d="M35.859,11.838c-0.13-0.802-1.115-1.12-1.69-0.544L8.003,38.002l14.479,7.614 c0.917,0.512,2.034,0.512,2.951,0.001L40,38.005L35.859,11.838z"></path>
                                         </svg>
-                                        <img height="50"
-                                             src="https://primefaces.org/cdn/primeng/images/primeng-logo-dark.svg">
+                                        <img width="50"
+                                             src="primeng-logo.webp">
                                         </img>
                                     </div>
 

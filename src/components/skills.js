@@ -1,13 +1,12 @@
 import React from 'react';
 export default function Skills() {
     return (
-        <div className="leading-normal tracking-normal text-black bg-cover h-screen flex items-center justify-center bg-center bg-no-repeat" style={{ backgroundImage: "url('header.png')" }}>
+        <div className="leading-normal tracking-normal text-black bg-cover min-h-screen flex flex-wrap items-center justify-center bg-center bg-no-repeat" style={{ backgroundImage: "url('header.png')" }}>
 
-                    <div className="mockup-window mx-auto h-fit w-3/5 bg-gray-500/40">
-                        <h2
-                            className="text-5xl text-center text-white font-extrabold">What I do:</h2>
-                        <p className="text-center mt-2 mb-4 mx-24 text-white text-[16px] font-light">I am always on the lookout for ways to improve my skills and grow professionally. I embrace new learning opportunities and am committed to staying updated in my field.</p>
-                        <div className="grid grid-cols-5 gap-8 mx-8 mb-12">
+            <div className="mockup-window mx-auto h-fit lg:w-4/5 xl:mx-60 md:w-11/12 bg-gray-500/40">
+                <h2 className="text-5xl text-center text-white font-extrabold">What I do:</h2>
+                <p className="text-center mt-2 mb-4 mx-8 text-white text-sm sm:text-md lg:text-[16px] font-light">I am always on the lookout for ways to improve my skills and grow professionally. I embrace new learning opportunities and am committed to staying updated in my field.</p>
+                <div className="grid grid-cols-2 md:grid-cols-4 sm:grid-cols-3 lg:grid-cols-5 gap-8 mx-8 mb-12">
                             <div className="w-full flex justify-center items-center">
                             <div className="w-28 h-28 p-2 shadow-xl shadow-black transform duration-300 hover:scale-110 ease-in-out">
                                 <div className="flex justify-center flex-col items-center">
