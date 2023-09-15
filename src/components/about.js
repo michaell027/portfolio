@@ -65,7 +65,7 @@ export default function About() {
 
           <div className="w-full lg:w-2/5">
             <img
-              src="about_me_photo.jpg"
+              src="/about_me_photo.JPG"
               className="rounded-none lg:rounded-lg shadow-2xl hidden lg:block"
               alt="Profile"
             ></img>
