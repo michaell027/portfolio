@@ -21,7 +21,7 @@ export default function HomePage() {
         (component === "projects" && <Projects />)}
       <div
         id="cover"
-        className="hidden absolute left-0 top-0 min-h-screen w-screen bg-black opacity-40 transition duration-600 ease-in-out"
+        className="hidden absolute left-0 top-0 min-h-screen w-screen bg-black opacity-60 transition duration-600 ease-in-out"
       ></div>
       {/*</div>*/}
     </div>

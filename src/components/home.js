@@ -36,7 +36,7 @@ export default function Home() {
         className="w-full min-h-screen antialiased bg-center leading-normal tracking-wider flex items-center justify-center bg-cover"
         style={{ backgroundImage: "url('header.png')" }}
       >
-        <div className="text-center w-full flex flex-col justify-center items-center">
+        <div className="text-center w-full -mt-6 flex flex-col justify-center items-center">
           <div
             className="block rounded-lg w-4/5 sm:w-2/3 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] bg-[hsla(0,0%,75%,0.4)] dark:shadow-black/20 p-2 sm:py-10 sm:px-12"
             style={{
