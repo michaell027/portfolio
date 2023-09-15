@@ -1,22 +1,23 @@
-import './App.css';
-import {createBrowserRouter, RouterProvider} from "react-router-dom";
+import "./App.css";
+import {
+  createBrowserRouter,
+  Navigate,
+  RouterProvider,
+} from "react-router-dom";
 import HomePage from "./pages/homePage";
-import ComingSoonPage from "./pages/comingSoonPage";
 
 function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <ComingSoonPage/>,
+      element: <HomePage />,
     },
     {
-        path: "/home",
-        element: <HomePage/>,
-    }
+      path: "*",
+      element: <Navigate to="/" replace />,
+    },
   ]);
-    return (
-        <RouterProvider router={router}/>
-    );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
