@@ -28,7 +28,7 @@ export default function Home() {
     }, 70);
 
     return () => clearInterval(interval);
-  }, [currentIndex, visibleChars, isAnimatingOut]);
+  }, [currentIndex, visibleChars, isAnimatingOut, texts]);
 
   return (
     <>
