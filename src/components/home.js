@@ -44,7 +44,7 @@ export default function Home() {
             }}
           >
             <p className="mb-14 mt-6 font-extrabold lg:text-3xl text-2xl text-[#2b2d47]">
-              {"<WELCOME TO MY PORTFOLIO>"}
+              {"< WELCOME TO MY PORTFOLIO />"}
             </p>
             <h1 className="text-[#2b2d47] text-xl font-bold tracking-tight sm:text-3xl md:text-4xl xl:text-7xl">
               <span>Hello there!</span>

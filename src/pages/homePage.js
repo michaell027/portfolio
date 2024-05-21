@@ -8,7 +8,7 @@ import Skills from "../components/skills";
 import Projects from "../components/projects";
 
 export default function HomePage() {
-  const [component, setComponent] = useState("home"); // Lift state up
+  const [component, setComponent] = useState("home");
 
   return (
     <div>
@@ -23,7 +23,6 @@ export default function HomePage() {
         id="cover"
         className="hidden absolute left-0 top-0 min-h-screen w-screen bg-black opacity-60 transition duration-600 ease-in-out"
       ></div>
-      {/*</div>*/}
     </div>
   );
 }

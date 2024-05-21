@@ -27,7 +27,7 @@ export default function Header({ component, setComponent }) {
     if (menuOpen) {
       timeoutId = setTimeout(() => {
         setHideItems(true);
-      }, 175);
+      }, 100);
     } else {
       clearTimeout(timeoutId);
       setHideItems(false);
@@ -40,7 +40,6 @@ export default function Header({ component, setComponent }) {
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
-    console.log(menuOpen);
   };
 
   return (
@@ -51,7 +50,7 @@ export default function Header({ component, setComponent }) {
     >
       <ul className="bg-gray-800 w-12 rounded-3xl flex flex-col items-center justify-center gap-4 py-4">
         <li>
-          <a
+          <button
             className="flex items-center justify-center p-2 rounded-full hover:bg-gray-700 text-white"
             onClick={toggleMenu}
           >
@@ -82,7 +81,7 @@ export default function Header({ component, setComponent }) {
                 />
               </svg>
             )}
-          </a>
+          </button>
         </li>
         <li
           className={`${hideItems ? "hidden" : ""}`}
@@ -93,7 +92,15 @@ export default function Header({ component, setComponent }) {
           }}
           onMouseLeave={() => setHoverHome(false)}
         >
-          <a className="flex items-center justify-center p-2 rounded-full hover:bg-gray-700 text-white svg-a">
+          <button
+            className={`flex items-center justify-center p-2 rounded-full cursor-pointer text-white svg-a ${
+              component === "home"
+                ? "border-l-2 border-b-2 border-white bg-gray-700"
+                : ""
+            }
+            ${hoverHome ? "bg-gray-700" : ""}
+            `}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -108,7 +115,7 @@ export default function Header({ component, setComponent }) {
                 d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
               />
             </svg>
-          </a>
+          </button>
         </li>
         <li
           className={`${hideItems ? "hidden" : ""}`}
@@ -119,7 +126,15 @@ export default function Header({ component, setComponent }) {
           }}
           onMouseLeave={() => setHoverAbout(false)}
         >
-          <a className="flex items-center justify-center p-2 rounded-full hover:bg-gray-700 text-white">
+          <button
+            className={`flex items-center justify-center p-2 rounded-full cursor-pointer text-white ${
+              component === "about"
+                ? "border-l-2 border-b-2 border-white bg-gray-700"
+                : ""
+            }
+            ${hoverAbout ? "bg-gray-700" : ""}
+            `}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -134,7 +149,7 @@ export default function Header({ component, setComponent }) {
                 d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
               />
             </svg>
-          </a>
+          </button>
         </li>
         <li
           className={`${hideItems ? "hidden" : ""}`}
@@ -145,7 +160,15 @@ export default function Header({ component, setComponent }) {
           }}
           onMouseLeave={() => setHoverEducation(false)}
         >
-          <a className="flex items-center justify-center p-2 rounded-full hover:bg-gray-700 text-white">
+          <button
+            className={`flex items-center justify-center p-2 rounded-full cursor-pointer text-white ${
+              component === "education"
+                ? "border-l-2 border-b-2 border-white bg-gray-700"
+                : ""
+            }
+            ${hoverEducation ? "bg-gray-700" : ""}
+            `}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -156,17 +179,25 @@ export default function Header({ component, setComponent }) {
               <path d="M13.06 15.473a48.45 48.45 0 017.666-3.282c.134 1.414.22 2.843.255 4.285a.75.75 0 01-.46.71 47.878 47.878 0 00-8.105 4.342.75.75 0 01-.832 0 47.877 47.877 0 00-8.104-4.342.75.75 0 01-.461-.71c.035-1.442.121-2.87.255-4.286A48.4 48.4 0 016 13.18v1.27a1.5 1.5 0 00-.14 2.508c-.09.38-.222.753-.397 1.11.452.213.901.434 1.346.661a6.729 6.729 0 00.551-1.608 1.5 1.5 0 00.14-2.67v-.645a48.549 48.549 0 013.44 1.668 2.25 2.25 0 002.12 0z" />
               <path d="M4.462 19.462c.42-.419.753-.89 1-1.394.453.213.902.434 1.347.661a6.743 6.743 0 01-1.286 1.794.75.75 0 11-1.06-1.06z" />
             </svg>
-          </a>
+          </button>
         </li>
-        <li className={`${hideItems ? "hidden" : ""}`}>
-          <a
-            className="flex items-center justify-center p-2 rounded-full hover:bg-gray-700 text-white"
-            onMouseEnter={() => setHoverSkills(true)}
-            onClick={() => {
-              setComponent("skills");
-              setMenuOpen(true);
-            }}
-            onMouseLeave={() => setHoverSkills(false)}
+        <li
+          className={`${hideItems ? "hidden" : ""}`}
+          onMouseEnter={() => setHoverSkills(true)}
+          onClick={() => {
+            setComponent("skills");
+            setMenuOpen(true);
+          }}
+          onMouseLeave={() => setHoverSkills(false)}
+        >
+          <button
+            className={`flex items-center justify-center p-2 rounded-full cursor-pointer text-white ${
+              component === "skills"
+                ? "border-l-2 border-b-2 border-white bg-gray-700"
+                : ""
+            }
+            ${hoverSkills ? "bg-gray-700" : ""}
+            `}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -182,17 +213,25 @@ export default function Header({ component, setComponent }) {
                 d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
               />
             </svg>
-          </a>
+          </button>
         </li>
-        <li className={`${hideItems ? "hidden" : ""}`}>
-          <a
-            className="flex items-center justify-center p-2 rounded-full hover:bg-gray-700 text-white"
-            onMouseEnter={() => setHoverProjects(true)}
-            onClick={() => {
-              setComponent("projects");
-              setMenuOpen(true);
-            }}
-            onMouseLeave={() => setHoverProjects(false)}
+        <li
+          className={`${hideItems ? "hidden" : ""}`}
+          onMouseEnter={() => setHoverProjects(true)}
+          onClick={() => {
+            setComponent("projects");
+            setMenuOpen(true);
+          }}
+          onMouseLeave={() => setHoverProjects(false)}
+        >
+          <button
+            className={`flex items-center justify-center p-2 rounded-full cursor-pointer text-white ${
+              component === "projects"
+                ? "border-l-2 border-b-2 border-white bg-gray-700"
+                : ""
+            }
+            ${hoverProjects ? "bg-gray-700" : ""}
+            `}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -206,17 +245,25 @@ export default function Header({ component, setComponent }) {
                 clipRule="evenodd"
               />
             </svg>
-          </a>
+          </button>
         </li>
-        <li className={`${hideItems ? "hidden" : ""}`}>
-          <a
-            className="flex items-center justify-center p-2 rounded-full hover:bg-gray-700 text-white"
-            onMouseEnter={() => setHoverContact(true)}
-            onClick={() => {
-              setComponent("contact");
-              setMenuOpen(true);
-            }}
-            onMouseLeave={() => setHoverContact(false)}
+        <li
+          className={`${hideItems ? "hidden" : ""}`}
+          onMouseEnter={() => setHoverContact(true)}
+          onClick={() => {
+            setComponent("contact");
+            setMenuOpen(true);
+          }}
+          onMouseLeave={() => setHoverContact(false)}
+        >
+          <button
+            className={`flex items-center justify-center p-2 rounded-full cursor-pointer text-white ${
+              component === "contact"
+                ? "border-l-2 border-b-2 border-white bg-gray-700"
+                : ""
+            }
+            ${hoverContact ? "bg-gray-700" : ""}
+            `}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -227,7 +274,7 @@ export default function Header({ component, setComponent }) {
               <path d="M4.913 2.658c2.075-.27 4.19-.408 6.337-.408 2.147 0 4.262.139 6.337.408 1.922.25 3.291 1.861 3.405 3.727a4.403 4.403 0 00-1.032-.211 50.89 50.89 0 00-8.42 0c-2.358.196-4.04 2.19-4.04 4.434v4.286a4.47 4.47 0 002.433 3.984L7.28 21.53A.75.75 0 016 21v-4.03a48.527 48.527 0 01-1.087-.128C2.905 16.58 1.5 14.833 1.5 12.862V6.638c0-1.97 1.405-3.718 3.413-3.979z" />
               <path d="M15.75 7.5c-1.376 0-2.739.057-4.086.169C10.124 7.797 9 9.103 9 10.609v4.285c0 1.507 1.128 2.814 2.67 2.94 1.243.102 2.5.157 3.768.165l2.782 2.781a.75.75 0 001.28-.53v-2.39l.33-.026c1.542-.125 2.67-1.433 2.67-2.94v-4.286c0-1.505-1.125-2.811-2.664-2.94A49.392 49.392 0 0015.75 7.5z" />
             </svg>
-          </a>
+          </button>
         </li>
       </ul>
 
@@ -237,52 +284,88 @@ export default function Header({ component, setComponent }) {
         }`}
       >
         <li
-          className={`flex items-center gap-2 ${
+          className={`flex items-center gap-2 cursor-pointer ${
             hoverHome || component === "home" ? "border-l-4 border-white" : ""
           }`}
+          onMouseEnter={() => setHoverHome(true)}
+          onClick={() => {
+            setComponent("home");
+            setMenuOpen(true);
+          }}
+          onMouseLeave={() => setHoverHome(false)}
         >
           <h5 className="text-white pl-1 menu-text">Home</h5>
         </li>
         <li
-          className={`flex items-center gap-2 ${
+          className={`flex items-center gap-2 cursor-pointer ${
             hoverAbout || component === "about" ? "border-l-4 border-white" : ""
           }`}
+          onMouseEnter={() => setHoverAbout(true)}
+          onClick={() => {
+            setComponent("about");
+            setMenuOpen(true);
+          }}
+          onMouseLeave={() => setHoverAbout(false)}
         >
           <h5 className="text-white pl-1 menu-text">About</h5>
         </li>
         <li
-          className={`flex items-center gap-2 ${
+          className={`flex items-center gap-2 cursor-pointer ${
             hoverEducation || component === "education"
               ? "border-l-4 border-white"
               : ""
           }`}
+          onMouseEnter={() => setHoverEducation(true)}
+          onClick={() => {
+            setComponent("education");
+            setMenuOpen(true);
+          }}
+          onMouseLeave={() => setHoverEducation(false)}
         >
           <h5 className="text-white pl-1 menu-text">Education</h5>
         </li>
         <li
-          className={`flex items-center gap-2 ${
+          className={`flex items-center gap-2 cursor-pointer ${
             hoverSkills || component === "skills"
               ? "border-l-4 border-white"
               : ""
           }`}
+          onMouseEnter={() => setHoverSkills(true)}
+          onClick={() => {
+            setComponent("skills");
+            setMenuOpen(true);
+          }}
+          onMouseLeave={() => setHoverSkills(false)}
         >
           <h5 className="text-white pl-1 menu-text">Skills</h5>
         </li>
         <li
-          className={`flex items-center gap-2 ${
+          className={`flex items-center gap-2 cursor-pointer ${
             hoverProjects || component === "projects"
               ? "border-l-4 border-white"
               : ""
           }`}
+          onMouseEnter={() => setHoverProjects(true)}
+          onClick={() => {
+            setComponent("projects");
+            setMenuOpen(true);
+          }}
+          onMouseLeave={() => setHoverProjects(false)}
         >
           <h5 className="text-white pl-1 menu-text">Projects</h5>
         </li>
         <li
-          className={`flex items-center gap-2 ${
+          className={`flex items-center gap-2 cursor-pointer ${
             hoverContact || component === "contact"
               ? "border-l-4 border-white"
               : ""
           }`}
+          onMouseEnter={() => setHoverContact(true)}
+          onClick={() => {
+            setComponent("contact");
+            setMenuOpen(true);
+          }}
+          onMouseLeave={() => setHoverContact(false)}
         >
           <h5 className="text-white pl-1 menu-text">Contact</h5>
         </li>

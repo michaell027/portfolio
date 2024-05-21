@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "./photo";
 
 export default function About() {
   return (
@@ -15,7 +16,7 @@ export default function About() {
             <div className="p-4 md:p-12 text-center lg:text-left">
               <div
                 className="block lg:hidden rounded-full shadow-xl mx-auto -mt-16 h-48 w-48 bg-cover bg-center"
-                style={{ backgroundImage: "url('about_me_photo.jpg')" }}
+                style={{ backgroundImage: "url('about_me_photo.webp')" }}
               ></div>
 
               <h1 className="text-3xl font-bold pt-8 lg:pt-0">
@@ -62,13 +63,8 @@ export default function About() {
               </div>
             </div>
           </div>
-
           <div className="w-full lg:w-2/5">
-            <img
-              src="/about_me_photo.JPG"
-              className="rounded-none lg:rounded-lg shadow-2xl hidden lg:block"
-              alt="Profile"
-            ></img>
+            <Image image={"/about_me_photo.webp"} />
           </div>
         </div>
       </div>

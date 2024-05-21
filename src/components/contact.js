@@ -1,4 +1,5 @@
 import "../FontAwesomeIcons";
+import Image from "./photo";
 
 export default function Contact() {
   return (
@@ -255,11 +256,7 @@ export default function Contact() {
                         </div>
                       </div>
                       <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl">
-                        <img
-                          className="rounded-xl"
-                          src="/notebook.JPG"
-                          alt="notebook"
-                        />
+                        <Image image={"/notebook.webp"} />
                       </div>
                     </div>
                   </div>
