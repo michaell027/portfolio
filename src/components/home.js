@@ -1,7 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 
 export default function Home() {
-  const texts = ["Michaela Majorošová", "a fullstack developer"];
+  const texts = useMemo(
+    () => ["Michaela Majorošová", "a fullstack developer"],
+    [],
+  );
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const [visibleChars, setVisibleChars] = useState(0);
   const [isAnimatingOut, setIsAnimatingOut] = useState(false);
