@@ -25,6 +25,9 @@ jobs:
     - name: Build the project
       run: npm run build
 
+    - name: Test the ui
+      run: npm test
+
     - name: Deploy to Firebase
       env:
         FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
