@@ -22,7 +22,7 @@ export default function Header({ component, setComponent }) {
   }, [menuOpen]);
 
   useEffect(() => {
-    let timeoutId;
+    let timeoutId = null;
 
     if (menuOpen) {
       timeoutId = setTimeout(() => {
@@ -51,6 +51,7 @@ export default function Header({ component, setComponent }) {
       <ul className="bg-gray-800 w-12 rounded-3xl flex flex-col items-center justify-center gap-4 py-4">
         <li>
           <button
+            data-testid="menu-button"
             className="flex items-center justify-center p-2 rounded-full hover:bg-gray-700 text-white"
             onClick={toggleMenu}
           >

@@ -27,3 +27,6 @@ package-lock.json
 # firebase
 firebase.json
 firebase-debug.log
+
+# idea
+.idea
