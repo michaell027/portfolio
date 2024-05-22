@@ -34,7 +34,7 @@ jobs:
     - name: Deploy to Firebase
       env:
         FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }},
-        FIREBASE_PROJECT: ${{ secrets.FIREBASE_ID }}
+        FIREBASE_ID: ${{ secrets.FIREBASE_ID }}
       run: |
         npm install -g firebase-tools
         firebase use $FIREBASE_ID
