@@ -33,7 +33,9 @@ jobs:
 
     - name: Deploy to Firebase
       env:
-        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }},
+        FIREBASE_PROJECT: ${{ secrets.FIREBASE_PROJECT }}
       run: |
         npm install -g firebase-tools
+        firebase use $FIREBASE_PROJECT
         firebase deploy --only hosting --token $FIREBASE_TOKEN

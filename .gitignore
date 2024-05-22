@@ -30,3 +30,9 @@ firebase-debug.log
 
 # idea
 .idea
+
+# vscode
+.vscode
+
+# firebase
+.firebase
